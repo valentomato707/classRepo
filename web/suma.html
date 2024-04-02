@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suma</title>
+  <style>
+    h1, p, button, input {
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    button {
+    margin-top: 25px;
+    border: 1px solid rgb(22, 150, 150);
+    border-radius: 15px;
+    background: rgb(22, 150, 150);
+    color: white;
+    padding: 8px;
+    }
+    button:hover {
+      background: rgb(15, 107, 107);
+      border: 1px solid rgb(15, 107, 107);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Suma</h1>
+  </header>
+  <section>
+    <p>Ingrese un número:</p>
+    <input type="text", id="a"></input>
+    <p>Ingrese otro para sumarlos y obtener el resultado:</p>
+    <input type="text", id="b"></input>
+    </br>
+    <button type="submit", onclick="handleClick()">Sumar</button>
+    <p id="resultado"></p>
+  </section>
+  <script>
+    const handleClick = () => {
+      var a = parseInt(document.getElementById("a").value)
+      var b = parseInt(document.getElementById("b").value)
+      var c = a + b
+      document.getElementById("resultado").innerHTML = `El resultado es: ${c}`
+      document.getElementById("a").value = ""
+      document.getElementById("b").value = ""
+    }
+  </script>
+</body>
+</html>
